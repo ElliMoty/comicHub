@@ -11,6 +11,7 @@ export class ComicListComponent implements OnInit {
   constructor(private _comicService: ComicHubService) {}
 
   ngOnInit() {
-    this._comicService.getComics().subscribe(data => (this.comics = data));
+    const comics = this._comicService.getComics();
+    comics.subscribe(data => (this.comics = data));
   }
 }

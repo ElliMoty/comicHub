@@ -1,8 +1,12 @@
 <div class="content" role="main">
   <div class="card-container">
-    <ul *ngFor="let comic of comics">
+    <ul *ngFor="let comic of comics" class="comic-list">
       <li>
-        <p>{{comic.id}}</p>
+        <a class="card" target="_blank" rel="noopener" href="#">
+          <!-- <img src="comic.image" title="comic-image" /> -->
+          <h4>{{ comic.name }}</h4>
+          <!-- <p>{{ comic.description }}</p> -->
+        </a>
       </li>
     </ul>
   </div>
