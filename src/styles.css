@@ -13,7 +13,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 8px 0;
+  margin: 0;
 }
 
 p {
@@ -34,15 +34,18 @@ p {
   margin: 0 16px;
 }
 
-.page-title {
+.home-title {
   margin: 8px 0 0 8px;
-  color: #e94883;
   font-size: 12px;
   text-align: center;
   background: #fdde59;
   width: 60px;
   height: 45px;
   padding: 2px;
+}
+
+#home {
+  color: #e94883;
 }
 
 .content {
@@ -75,11 +78,6 @@ p {
   margin-right: 0;
 }
 
-.card.card-small {
-  height: 16px;
-  width: 168px;
-}
-
 .card-container .card:not(.highlight-card) {
   cursor: pointer;
 }
@@ -93,20 +91,6 @@ p {
   fill: rgb(105, 103, 103);
 }
 
-.card.highlight-card {
-  background-color: #1976d2;
-  color: white;
-  font-weight: 600;
-  border: none;
-  width: auto;
-  min-width: 30%;
-  position: relative;
-}
-
-.card.card.highlight-card span {
-  margin-left: 60px;
-}
-
 .comic-list {
   list-style: none;
 }
@@ -115,13 +99,13 @@ p {
   display: block;
   display: -webkit-box;
   max-width: 250px;
-  margin: 15px auto;
-  text-align: justify;
   line-height: 1.5;
   -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin: 15px auto;
+  text-align: justify;
 }
 
 a,
@@ -135,6 +119,28 @@ a:hover {
   color: #125699;
 }
 
+.comic-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  margin: 20px 40px;
+  padding: 20px 40px;
+  border: 1px solid #eee;
+  background: #fafafa;
+}
+.comic-details-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 20px;
+  text-align: justify;
+  padding-left: 30px;
+}
+
+.comic-details-title {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+/* Footer */
 footer {
   margin-top: 8px;
   display: flex;

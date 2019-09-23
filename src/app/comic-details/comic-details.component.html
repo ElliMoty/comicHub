@@ -1,1 +1,9 @@
-<p>comic-details works!</p>
+<div class="comic-details" *ngIf="comic">
+  <img [src]="comic.image" [title]="comic.name" width="300px" height="350px" />
+
+  <div class="comic-details-info">
+    <h3 class="comic-details-title">{{ comic.name }}</h3>
+    <p>{{ comic.description }}</p>
+  </div>
+
+</div>
