@@ -10,6 +10,7 @@ import { ComicHubService } from "../comic.service";
 export class ComicDetailsComponent implements OnInit {
   public comics = [];
   comic;
+  characters = [];
   constructor(
     private _comicService: ComicHubService,
     private route: ActivatedRoute
@@ -21,6 +22,7 @@ export class ComicDetailsComponent implements OnInit {
       this.comics = data;
       this.route.paramMap.subscribe(params => {
         this.comic = this.comics[+params.get("comicId")];
+        console.log(this.comic.characters)
       });
     });
   }

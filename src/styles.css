@@ -28,6 +28,7 @@ p {
   background-color: #1976d2;
   color: white;
   font-weight: 600;
+  font-size: 18px;
 }
 
 .toolbar img {
@@ -42,6 +43,7 @@ p {
   width: 60px;
   height: 45px;
   padding: 2px;
+  line-height: 36px;
 }
 
 #home {
@@ -72,6 +74,10 @@ p {
   transition: all 0.2s ease-in-out;
   line-height: 24px;
   padding: 10px;
+}
+.comic-characters {
+  width: 170px;
+  height: 400px;
 }
 
 .card-container .card:not(:last-child) {

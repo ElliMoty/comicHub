@@ -1,9 +1,37 @@
-<div class="comic-details" *ngIf="comic">
-  <img [src]="comic.image" [title]="comic.name" width="300px" height="350px" />
+<div *ngIf="comic">
+  <div class="comic-details" *ngIf="comic">
+    <img
+      [src]="comic.image"
+      [title]="comic.name"
+      width="300px"
+      height="350px"
+      object-fit="cover"
+    />
 
-  <div class="comic-details-info">
-    <h3 class="comic-details-title">{{ comic.name }}</h3>
-    <p>{{ comic.description }}</p>
+    <div class="comic-details-info">
+      <h3 class="comic-details-title">{{ comic.name }}</h3>
+      <p>{{ comic.description }}</p>
+    </div>
   </div>
 
+  <h2>Characters</h2>
+
+  <div class="content" role="main">
+    <div class="card-container">
+      <ul *ngFor="let character of comic.characters" class="comic-list">
+        <li>
+          <a class="card comic-characters">
+            <img
+              [src]="character.image"
+              [title]="character.name"
+              width="150px"
+              height="200px"
+            />
+            <h4>{{ character.name }}</h4>
+            <p class="comic-description">{{ character.description }}</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
