@@ -8,13 +8,15 @@ import { AppComponent } from "./app.component";
 import { ToolbarComponent } from "./toolbar/toolbar.component";
 import { ComicListComponent } from "./comic-list/comic-list.component";
 import { ComicDetailsComponent } from "./comic-details/comic-details.component";
+import { AddCharacterComponent } from './add-character/add-character.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
     ComicListComponent,
-    ComicDetailsComponent
+    ComicDetailsComponent,
+    AddCharacterComponent
   ],
   imports: [
     BrowserModule,
@@ -22,6 +24,7 @@ import { ComicDetailsComponent } from "./comic-details/comic-details.component";
     RouterModule.forRoot([
       { path: '', component: ComicListComponent },
       { path: 'comics/:comicId', component: ComicDetailsComponent },
+      { path: 'add-new-character', component: AddCharacterComponent },
     ])
   ],
   providers: [ComicHubService],

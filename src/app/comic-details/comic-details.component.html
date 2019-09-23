@@ -14,7 +14,10 @@
     </div>
   </div>
 
-  <h2>Characters</h2>
+  <div class="characters">
+    <h2>Characters</h2>
+    <a title="Add more characters" [routerLink]="['/add-new-character']"><span class="add"> + </span></a>
+  </div>
 
   <div class="content" role="main">
     <div class="card-container">
@@ -27,8 +30,11 @@
               width="150px"
               height="200px"
             />
-            <h4>{{ character.name }}</h4>
-            <p class="comic-description">{{ character.description }}</p>
+            <h4 class="titles-detailsPg">{{ character.name }}</h4>
+            <h5>Number of roles: {{ character.numberOfRoles }}</h5>
+            <p class="comic-description character-description">
+              {{ character.description }}
+            </p>
           </a>
         </li>
       </ul>

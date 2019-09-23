@@ -53,7 +53,7 @@ p {
 .content {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
 }
 
 .card-container {
@@ -75,16 +75,34 @@ p {
   line-height: 24px;
   padding: 10px;
 }
+.characters {
+  display: flex;
+  flex-direction: row;
+  margin:0 40px;
+  padding: 10px;
+  background: #fdde59;
+  color: #1976d2;
+}
 .comic-characters {
   width: 170px;
-  height: 400px;
+  height: 405px;
+}
+.add {
+  margin-left: 1198px;
+  line-height: 17px;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+a .add:hover {
+  color: #e94883;
 }
 
 .card-container .card:not(:last-child) {
   margin-right: 0;
 }
 
-.card-container .card:not(.highlight-card) {
+.card-container .card:not(.highlight-card, .comic-characters) {
   cursor: pointer;
 }
 
@@ -100,18 +118,29 @@ p {
 .comic-list {
   list-style: none;
 }
-
+.titles-homePg {
+  margin-top: 12px;
+}
+.titles-detailsPg {
+  margin-top: 12px;
+}
 .comic-description {
   display: block;
   display: -webkit-box;
-  max-width: 250px;
+  max-width: 258px;
   line-height: 1.5;
   -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
   margin: 15px auto;
-  text-align: justify;
+  font-size: 14px;
+}
+
+.character-description {
+  font-size: 12px;
+  margin: 10px auto;
+  -webkit-line-clamp: 7
 }
 
 a,
