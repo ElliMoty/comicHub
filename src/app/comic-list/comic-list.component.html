@@ -3,9 +3,9 @@
     <ul *ngFor="let comic of comics" class="comic-list">
       <li>
         <a class="card" target="_blank" rel="noopener" href="#">
-          <!-- <img src="comic.image" title="comic-image" /> -->
+          <img [src]="comic.image" [title]="comic.name" width="200px" height="250px"/>
           <h4>{{ comic.name }}</h4>
-          <!-- <p>{{ comic.description }}</p> -->
+          <p class="comic-description">{{ comic.description }}</p>
         </a>
       </li>
     </ul>
